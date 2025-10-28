@@ -1,0 +1,18 @@
+name: Daily Backup
+
+on:
+  workflow_dispatch:
+
+jobs:
+  backup:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run backup script
+        run: |
+          echo "Running backup script..."
+          # Add your backup script commands here
+          # Example: xcopy your files to a backup location
